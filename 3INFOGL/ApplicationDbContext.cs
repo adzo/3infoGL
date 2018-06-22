@@ -29,10 +29,10 @@ namespace _3INFOGL
         public DbSet<WorkFlow> WorkFlows { get; set; }
 
 
-        static ApplicationDbContext()
-        {
-            Database.SetInitializer<ApplicationDbContext>(new ApplicationDbInitializer());
-        }
+        //static ApplicationDbContext()
+        //{
+        //    Database.SetInitializer<ApplicationDbContext>(new ApplicationDbInitializer());
+        //}
 
         public static ApplicationDbContext Create()
         {

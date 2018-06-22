@@ -44,7 +44,7 @@ namespace _3INFOGL.Models
         public string Prenom { get; set; }
         public string Cin { get; set; }
         public string Adresse { get; set; }
-        public int Telephone { get; set; }
+        
         public string DateNaissance { get; set; }
         public string DateEmbauche { get; set; }
 

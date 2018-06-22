@@ -19,12 +19,13 @@ using _3INFOGL.Results;
 
 namespace _3INFOGL.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
+        ApplicationDbContext AdbContext = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -317,6 +318,8 @@ namespace _3INFOGL.Controllers
             return logins;
         }
 
+        
+
         // POST api/Account/Register
         [AllowAnonymous]
         [Route("Register")]
@@ -326,11 +329,27 @@ namespace _3INFOGL.Controllers
             {
                 return BadRequest(ModelState);
             }
+            
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var ContextManager = HttpContext.Current.GetOwinContext().Get<ApplicationDbContext>();
+            Departement d = ContextManager.Departements.Find(1);
 
+            var user = new ApplicationUser()
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                Departement = d,
+                PhoneNumber = model.Telephone.ToString(),
+                Matricule = model.Matricule,
+                Cin =model.Cin,
+                DateNaissance = model.DateNaissance,
+                DateEmbauche = model.DateEmbauche,
+                Nom = model.Nom,
+                Prenom = model.Prenom
+            };
+            
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
-
+            
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);

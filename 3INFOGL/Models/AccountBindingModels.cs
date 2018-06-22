@@ -32,7 +32,7 @@ namespace _3INFOGL.Models
         public string ConfirmPassword { get; set; }
     }
 
-    public class RegisterBindingModel
+    public class RegisterBindingModel 
     {
         [Required]
         [Display(Name = "Email")]
@@ -48,6 +48,18 @@ namespace _3INFOGL.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public string Matricule { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public string Cin { get; set; }
+        public string Adresse { get; set; }
+        public string Telephone { get; set; }
+        public string DateNaissance { get; set; }
+        public string DateEmbauche { get; set; }
+        public int DepartementId { get; set; }
+
+
     }
 
     public class RegisterExternalBindingModel

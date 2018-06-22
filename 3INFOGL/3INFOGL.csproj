@@ -249,6 +249,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Configurations\DepartementConfiguration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DepartementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -261,6 +262,14 @@
     <Compile Include="Migrations\201806221730538_Init2.cs" />
     <Compile Include="Migrations\201806221730538_Init2.Designer.cs">
       <DependentUpon>201806221730538_Init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222051221_editBindingModel.cs" />
+    <Compile Include="Migrations\201806222051221_editBindingModel.Designer.cs">
+      <DependentUpon>201806222051221_editBindingModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806222059083_updateIdentityModel.cs" />
+    <Compile Include="Migrations\201806222059083_updateIdentityModel.Designer.cs">
+      <DependentUpon>201806222059083_updateIdentityModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -375,6 +384,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806221730538_Init2.resx">
       <DependentUpon>201806221730538_Init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222051221_editBindingModel.resx">
+      <DependentUpon>201806222051221_editBindingModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222059083_updateIdentityModel.resx">
+      <DependentUpon>201806222059083_updateIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
