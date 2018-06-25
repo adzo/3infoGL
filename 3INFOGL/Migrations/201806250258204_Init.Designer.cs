@@ -7,13 +7,13 @@ namespace _3INFOGL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class updateIdentityModel : IMigrationMetadata
+    public sealed partial class Init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updateIdentityModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806222059083_updateIdentityModel"; }
+            get { return "201806250258204_Init"; }
         }
         
         string IMigrationMetadata.Source

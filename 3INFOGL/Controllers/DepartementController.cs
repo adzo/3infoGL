@@ -24,8 +24,8 @@ namespace _3INFOGL.Controllers
         //get api/Departement/GetDepartement
         [ResponseType(typeof(List<Departement>))]
         [AllowAnonymous]
-        [Route("GetDepartements")]
-        public List<Departement> GetDepartements()
+        [Route("Get")]
+        public List<Departement> Get()
         {
             List<Departement> resultat = AdbContext.Departements.ToList();
             
@@ -38,8 +38,8 @@ namespace _3INFOGL.Controllers
         //get api/Departement/getDepartementById
         [ResponseType(typeof(Departement))]
         [AllowAnonymous]
-        [Route("GetDepartementById/{id}")]
-        public Departement GetDepartementById(int id)
+        [Route("Get/{id}")]
+        public Departement Get(int id)
         {
             Departement resultat = AdbContext.Departements.Find(id);
             return resultat;
@@ -47,19 +47,27 @@ namespace _3INFOGL.Controllers
 
         // POST api/Departement/AddDepartement
         [AllowAnonymous]
-        [Route("AddDepartement")]
-        public IHttpActionResult AddDepartment(Departement model)
+        [Route("Create")]
+        public IHttpActionResult Create(Departement model)
         {
             AdbContext.Departements.Add(model);
             AdbContext.SaveChanges();
             return Ok("model: "+model.NomDepartement+", "+model.Responsable);
         }
 
-        //[AllowAnonymous]
-        //[Route("AddDepartement")]
-        //public IHttpActionResult AddDepartment()
-        //{
-        //    return Ok("got to the action");
-        //}
+        [Route("Update")]
+        public IHttpActionResult Update(Departement model)
+        {
+            Departement dep = AdbContext.Departements.Find(model.DepartementId);
+            dep.Email = model.Email;
+            dep.NomDepartement = model.NomDepartement;
+            dep.Responsable = model.Responsable;
+            dep.Telephone = model.Telephone;
+            AdbContext.SaveChanges();
+            return Ok("Update with success");
+        }
+
+
+
     }
 }

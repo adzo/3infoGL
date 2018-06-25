@@ -3,16 +3,16 @@ namespace _3INFOGL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class updateIdentityModel : DbMigration
+    public partial class Init2 : DbMigration
     {
         public override void Up()
         {
-            DropColumn("ApplicationUsers", "Telephone");
+            AddColumn("Fichiers", "DocumentId", c => c.String(unicode: false));
         }
         
         public override void Down()
         {
-            AddColumn("ApplicationUsers", "Telephone", c => c.Int(nullable: false));
+            DropColumn("Fichiers", "DocumentId");
         }
     }
 }

@@ -318,7 +318,25 @@ namespace _3INFOGL.Controllers
             return logins;
         }
 
-        
+        //POST api/Account/Update
+        [Route("Update")]
+        public IHttpActionResult Update(ApplicationUser user)
+        {
+            ApplicationUser found = AdbContext.Users.Find(user.Id);
+            found.Matricule = user.Matricule;
+            found.Nom = user.Nom;
+            found.PhoneNumber = user.PhoneNumber;
+            found.Prenom = user.Prenom;
+            found.DateNaissance = user.DateNaissance;
+            //Add verification if Email already exist
+
+            found.Email = user.Email;
+            found.UserName = user.Email;
+            AdbContext.SaveChanges();
+
+
+            return Ok("Update with Success");
+        }
 
         // POST api/Account/Register
         [AllowAnonymous]

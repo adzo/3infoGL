@@ -16,5 +16,10 @@ namespace _3INFOGL.Models
         public string Email { get; set; }
         public int Fax { get; set; }
 
+
+        public Correspondant()
+        {
+            this.CorrespondantId = Guid.NewGuid().ToString();
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace _3INFOGL.Models
         //Navigation Properties
         public virtual List<Fichier> Fichiers { get; set; }
         public virtual Correspondant Correspondant { get; set; }
+
+        public Courrier()
+        {
+            this.CourrierId = Guid.NewGuid().ToString();
+        }
     }
 }

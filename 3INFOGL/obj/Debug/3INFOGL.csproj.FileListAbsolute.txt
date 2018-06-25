@@ -271,12 +271,10 @@ D:\Git\ProjetIntegration\3infoGL\3INFOGL\bin\Microsoft.AI.WindowsServer.xml
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\bin\Microsoft.AI.Web.xml
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.csprojAssemblyReference.cache
-D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\_3INFOGL.Migrations.Init.resources
-D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\_3INFOGL.Migrations.Init2.resources
-D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.csproj.GenerateResource.cache
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.csproj.CoreCompileInputs.cache
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.csproj.CopyComplete
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.dll
 D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.pdb
-D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\_3INFOGL.Migrations.editBindingModel.resources
-D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\_3INFOGL.Migrations.updateIdentityModel.resources
+D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\_3INFOGL.Migrations.Init.resources
+D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\3INFOGL.csproj.GenerateResource.cache
+D:\Git\ProjetIntegration\3infoGL\3INFOGL\obj\Debug\_3INFOGL.Migrations.Init2.resources

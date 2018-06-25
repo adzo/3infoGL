@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace _3INFOGL.Models
 {
@@ -49,10 +50,12 @@ namespace _3INFOGL.Models
         public string DateEmbauche { get; set; }
 
         //Foreign Key
-        public int DepartementId { get; set; }
+        [ForeignKey("Departement")]
+        public string DepartementId { get; set; }
 
         //Navigation properties
         public virtual Departement Departement { get; set; }
+        
 
         public async Task<ClaimsIdentity>
     GenerateUserIdentityAsync(ApplicationUserManager manager, string authenticationType)

@@ -22,11 +22,14 @@ namespace _3INFOGL.Models
         //User created the document
         public string ApplicationUserId { get; set; }
         //Workflow for the document
+        [ForeignKey("WorkFlow")]
         public string WorkFlowId { get; set; }
 
 
         public virtual Fichier Fichier { get; set; }
         public virtual ApplicationUser CreationUser { get; set; }
         public virtual WorkFlow WorkFlow { get; set; }
+
+        
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,7 +14,16 @@ namespace _3INFOGL.Models
 
         //Ce field est nullable (string)
         //un fichier peut appartenir a un document ou un courrier
+        [ForeignKey("Courrier")]
         public string CourrierId { get; set; }
+        
 
+        public virtual Courrier Courrier { get; set; }
+        public virtual Document Document { get; set; }
+
+        public Fichier()
+        {
+            this.FichierId = Guid.NewGuid().ToString();
+        }
     }
 }

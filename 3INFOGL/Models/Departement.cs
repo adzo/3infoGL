@@ -7,7 +7,7 @@ namespace _3INFOGL.Models
 {
     public class Departement
     {
-        public int DepartementId { get; set; }
+        public string DepartementId { get; set; }
         public string NomDepartement { get; set; }
         public string Responsable { get; set; }
         public int Telephone { get; set; }
@@ -16,5 +16,10 @@ namespace _3INFOGL.Models
 
         public virtual List<ApplicationUser> Users { get; set; }
         public virtual List<WorkFlow> WorkFlows { get; set; }
+
+        public Departement()
+        {
+            this.DepartementId = Guid.NewGuid().ToString();
+        }
     }
 }
